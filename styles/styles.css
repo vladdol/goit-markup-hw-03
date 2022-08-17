@@ -50,10 +50,6 @@ h2 {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
- align-items: center; */
 }
 
 /* Хедер */
@@ -90,8 +86,7 @@ header nav {
   display: flex;
   align-items: center;
 }
-
-nav {
+особенностиfe nav {
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -139,12 +134,14 @@ nav {
 }
 
 /* Герой */
-.hero {
+.hero-section {
   background-color: var(--second-bg-color);
   text-align: center;
+  padding-top: 213px;
+  padding-bottom: 150px;
 }
 
-.hero h1 {
+.hero-section h1 {
   color: var(--bgcolor);
   font-weight: 900;
   font-size: 44px;
@@ -152,20 +149,20 @@ nav {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  padding-top: 213px;
   margin-top: 0;
   margin-bottom: 40px;
   display: block;
   padding-bottom: 0;
 }
 
-.hero button {
+.hero-section button {
   color: var(--bgcolor);
   background-color: var(--accent);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  display: inline-block;
 
   margin-right: auto;
   margin-left: auto;
@@ -179,23 +176,22 @@ nav {
   margin-bottom: 0;
 }
 
-.hero button:hover,
-.hero button:focus {
+.hero-section button:hover,
+.hero-section button:focus {
   color: var(--accent);
   background-color: var(--bgcolor);
 }
 
-.hero .button {
-  padding-bottom: 150px;
-}
-
 /* Особенности */
-.features-list {
-  display: flex;
-  align-items: flex-start;
+.features-section {
   padding-bottom: 94px;
   padding-top: 107px;
   padding-left: 0;
+}
+
+.features-list {
+  display: flex;
+  align-items: flex-start;
 }
 
 .features-list li {
@@ -236,10 +232,13 @@ h2.hidden {
 }
 
 /* Работы */
+.work-section {
+  padding-bottom: 94px;
+}
+
 .work-list ul {
   display: flex;
   padding-left: 0;
-  padding-bottom: 94px;
 }
 
 .work-list li + li {
@@ -247,49 +246,20 @@ h2.hidden {
 }
 
 /* teams */
-.team {
+.team-section {
   background-color: var(--bg-color-button);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team h2 {
-  padding-top: 94px;
   margin-bottom: 50px;
   line-height: 1.16;
-}
-
-.team h3 {
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.team p {
-  font-size: 16px;
-  line-height: 1.19;
-  color: var(--primery-text-color);
-
-  margin-top: 10px;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .team-list {
   display: flex;
   padding-left: 0;
-  padding-bottom: 94px;
-}
-
-.team-list-text {
-  text-align: center;
-  padding-bottom: 30px;
-  padding-top: 30px;
 }
 
 .team-list li {
@@ -308,16 +278,41 @@ li img {
   display: block;
 }
 
-/* футтер */
-footer {
-  background-color: var(--second-bg-color);
-  color: var(--contact-text-color);
+.team-list h3 {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.container-footer {
+.team-list p {
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--primery-text-color);
+
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-list-text {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+/* футтер */
+.footer {
+  background-color: var(--second-bg-color);
+  color: var(--contact-text-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: 0;
 }
 
 footer .logo {
@@ -349,12 +344,12 @@ footer a[class='logo'],
 
 /* Портфолио */
 /* Фильтры кнопок */
-.work {
+.filter-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.work h1 {
+.filter-section h1 {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -402,20 +397,6 @@ button.active,
 }
 
 /* Части фильта */
-.work h2 {
-  text-align: left;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  text-align: left;
-
-  margin-bottom: 4px;
-}
-
-.work p {
-  margin: 0;
-}
 
 .filter-list {
   padding-left: 0;
@@ -432,10 +413,9 @@ button.active,
   margin-right: 30px;
 }
 
-.filter-list li:nth-last-child(-n + 3){
+.filter-list li:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-
 
 .type-one {
   border: 1px solid #eeeeee;
@@ -445,4 +425,19 @@ button.active,
   padding-bottom: 20px;
   padding-top: 20px;
   display: block;
+}
+
+.type-one h2 {
+  text-align: left;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  text-align: left;
+
+  margin-bottom: 4px;
+}
+
+.type-one p {
+  margin: 0;
 }
